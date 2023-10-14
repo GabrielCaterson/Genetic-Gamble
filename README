@@ -1,0 +1,17 @@
+This is an attempt to make a soft proof that coinflip gambling always leads to gambler's ruin. It uses a genetic algorithm to try to learn parameters by which an optimal betting strategy can be found.
+
+
+A stricter proof is as follows, in propositional logic:
+
+    P1). It is nomologically possible for a gambler to lose every attempt at a coinflip. (P)
+    P2). Gamblers can not start off with infinite money. (Q)
+    P3). If it is nomologically possible for a gambler to lose every attempt at a coinflip for any given number of coinflips, and gamblers can not start off with infinite money, a gambler who continues to gamble indefinitely will eventually toss a long enough string of losses that they will lose all of their money. (P ∧ Q ⇒ R)
+    C). A gambler who continues to gamble indefinitely will eventually toss a long enough string of losses that they will lose all of their money.
+
+
+Unfortunately the strict proof is not very interesting, but the soft proof demonstrated in the code here is designed to show that there isn't even an optimal betting strategy that would make the risk of ruin worth the reward. 
+
+
+The algorithm attempts to impose a false ruin that rises as the amount of money the gambler has made rises. If the gambler loses enough that they reach false ruin, the algorithm will bet only a very small amount until the gambler makes a streak of wins that gain the gambler more money. The amount of money that is bet is based off of the total amount of money minus the false ruin. 
+
+The evolved parameters include the initial false ruin percentage, the amount to change the bet after a win, the amount to change the bet after a loss, and others.

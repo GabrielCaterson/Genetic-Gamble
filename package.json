@@ -1,0 +1,16 @@
+{
+  "name": "Genetic-Gamble",
+  "homepage": "https://gabrielcaterson.github.io/Genetic-Gamble",
+
+  "version": "1.0.0",
+  "description": "An attempt to create an optimal coinflip gambling strategy.",
+  "main": "GeneticGamble.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Gabriel Caterson",
+  "license": "ISC",
+  "dependencies": {
+    "geneticalgorithm": "^1.0.2"
+  }
+}
